@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Clone</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="images/youtube.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!--nav starts-->
+    <nav>
+        <!--hamburger menu icon-->
+        <yt-icon-button id="guide-button" toggleable="true" class="style-scope ytd-masthead"><button id="button"
+                class="style-scope yt-icon-button" aria-label="Guide" aria-pressed="false" fdprocessedid="1udz5g">
+                <yt-icon id="guide-icon" class="style-scope ytd-masthead"><span
+                        class="yt-icon-shape style-scope yt-icon yt-spec-icon-shape">
+                        <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                                xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
+                                focusable="false" aria-hidden="true"
+                                style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
+                            </svg></div>
+                    </span></yt-icon>
+            </button><yt-interaction id="interaction" class="circular style-scope yt-icon-button">
+                <div class="stroke style-scope yt-interaction"></div>
+                <div class="fill style-scope yt-interaction"></div>
+            </yt-interaction>
+        </yt-icon-button>
+        <!--hamburger menu icon ends-->
+
+        <!--logo starts-->
+        <div class="logo">
+            <div class="image">
+                <img src="/images/youtube.png" alt="image">
+            </div>
+            <div class="text">
+                <h3>YouTube <sup>IN</sup> </h3>
+            </div>
+        </div>
+        <!--logo ends-->
+
+        <!--search-->
+        <div class="search">
+            <input type="text" title="searchbar" id="searchbar" id="searchbar">
+            <button onclick="clearDetails()" title="icon" class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24"
+                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                    <path fill="#f1f1f1"
+                        d="m12.71 12 8.15 8.15-.71.71L12 12.71l-8.15 8.15-.71-.71L11.29 12 3.15 3.85l.71-.71L12 11.29l8.15-8.15.71.71L12.71 12z">
+                    </path>
+                </svg>
+            </button>
+
+            <div class="crossIcon">
+                <button aria-label="SearchIcon"
+                    class="ytSearchboxComponentSearchButton ytSearchboxComponentSearchButtonDark searchIcon"
+                    title="SearchIcon" fdprocessedid="yzsx3h" onclick="getVideoDetails()"><span
+                        class="ytIconWrapperHost"><span class="yt-icon-shape yt-spec-icon-shape">
+                            <div style="width: 100%; height: 100%; display: block; fill: currentcolor;"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24"
+                                    viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true"
+                                    style="pointer-events: none; display: inherit; width: 100%; height: 100%;">
+                                    <path clip-rule="evenodd"
+                                        d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909zM18 11a7 7 0 00-14 0 7 7 0 1014 0z"
+                                        fill-rule="evenodd"></path>
+                                </svg></div>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <!--search ends-->
+    </nav>
+    <!--nav ends-->
+
+    <!--content display-->
+    <div class="message-display">
+        <div class="container">
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <div class="content-display" id="details">
+        <div class="container">
+            <div class="display-left">
+                <img src="" alt="YTThumbnail" id="thumbnail">
+            </div>
+
+            <div class="display-right">
+                <p class="actual-title" id="actual-title"></p> <br>
+                <p class="duration" id="duration"></p> <br>
+                <p class="views" id="views"></p> <br>
+                <p class="description" id="description"></p> <br>
+                <p class="channel" id="channel"></p> <br>
+                <p class="upload-date" id="upload-date"></p> <br>
+                <a href="" target="_blank" id="url" class="url" onclick="openVideo()"></a>
+            </div>
+        </div>
+    </div>
+    <!--content display ends-->
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
